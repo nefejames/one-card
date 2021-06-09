@@ -1,10 +1,14 @@
 import GlobalStyle from "../styles/GlobalStyles";
+import { ThemeProvider } from "styled-components";
+import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

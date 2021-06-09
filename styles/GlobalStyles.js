@@ -11,14 +11,19 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     font-size: 62.5%;
-    color: #23242a;
+    background: ${({ theme }) => theme.colors.bodyBgColor};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }  
 
   p{
+    color: ${({ theme }) => theme.colors.textColor};
     font-size: 1.1rem;
     line-height: 2rem;
-  font-weight: 400;
+    font-weight: 400;
+  }
+
+  h1, h2, h3{
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
